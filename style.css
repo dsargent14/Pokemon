@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Pokemon Solid";
+    src: url("./Pokemon\ Solid.ttf");
+}
+
+:root {
+    --pokemon-yellow: #FFCB05;
+    --pokemon-blue: #3C5AA6;
+    --pokemon-dark-yellow: #C7A008;
+    --pokemon-light-blue: #2A75BB;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pokemon-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-element img {
+    margin: 0;
+    padding: 0;
+    /* filter: contrast(200%) brightness(0%); */
+}
+
+.pokemon-element h3 {
+    font-family: "Pokemon Solid";
+    font-weight: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    margin-top: -1.8rem;
+    padding: 0;
+}
+
+#whos-that-pokemon img {
+    filter: contrast(200%) brightness(0%);
+}
+
+#whos-that-pokemon h3 {
+    visibility: hidden;
+}
+
+footer {
+    margin-top: 10rem;
+    font-style: italic;
+}

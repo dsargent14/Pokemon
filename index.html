@@ -5,20 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who's That Pokemon</title>
+    <title>Who's that Pokémon?</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <form id="pokemon-search">
-        <input type="search" name="pokemon-name" id="pokemon-name" placeholder="Pokemon Search">
-    </form>
-    <main>
+    <section id="whos-that-pokemon">
+        <h1>Who's that Pokémon?</h1>
+        <form id="mini-game-form">
+            <input type="text" name="pokemon" placeholder="Guess a Pokémon">
+        </form>
+    </section>
 
-    </main>
+    <hr>
 
+    <section id="pokemon-search-gallery">
+        <form id="pokemon-search">
+            <input type="search" name="pokemon" placeholder="Search a Pokémon">
+        </form>
+
+        <main></main>
+    </section>
+
+    <footer>
+        <sub>The font "Pokemon Solid" is used under the Creative Commons license and was authored by <a href="https://www.fontspace.com/pokemon-solid-font-f13844">IBPB</a>.</sub>
+    </footer>
     <script src="./main.js"></script>
-
+    <script src="./GuessPokeGame.js"></script>
+    <script src="./pokeSearchGallery.js"></script>
 </body>
 
 </html>

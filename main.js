@@ -1,27 +1,20 @@
-const main = document.querySelector("main")
-const searchForm = document.querySelector("form#pokemon-search")
+function appendPokemonElement(name, parentElement) {
+    const pokemonElement = document.createElement("article")
+    pokemonElement.classList.add("pokemon-element")
+    pokemonElement.dataset.pokemon = name
+    parentElement.append(pokemonElement)
 
-searchForm.addEventListener("submit", searchFormHandler)
-
-function searchFormHandler(event) {
-    event.preventDefault()
-
-    const pokemonName = searchForm.elements.pokemon.value.toLowerCase()
-    console.log("The user searched for:", pokemonName)
-
-    getPokemonDataForGallery(pokemonName) // refactoring
+    return pokemonElement
 }
 
-function getPokemonDataForGallery(pokemonNameOrId) {
-    // EXAMPLE: GET https://pokeapi.co/api/v2/pokemon/articuno
-    // EXAMPLE: GET https://pokeapi.co/api/v2/pokemon/12
-    fetch("https://pokeapi.co/api/v2/pokemon/" + pokemonNameOrId)
-        .then(response => response.json())
-        .then(renderPokemonInGallery)
+function appendPokemonSprite(imgURL, parentElement) {
+    const sprite = document.createElement("img")
+    sprite.src = imgURL
+    parentElement.append(sprite)
 }
 
-function renderPokemonInGallery(pokemon) {
-    const pokemonElement = appendPokemonElement(pokemon.name, main)
-    appendPokemonSprite(pokemon.sprites.front_default, pokemonElement)
-    appendPokemonTitle(pokemon.name, pokemonElement)
+function appendPokemonTitle(name, parentElement) {
+    const title = document.createElement("h3")
+    title.append(name)
+    parentElement.append(title)
 }
