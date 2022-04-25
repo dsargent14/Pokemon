@@ -3,6 +3,14 @@
     src: url("./Pokemon\ Solid.ttf");
 }
 
+h1 {
+    color: #2A75BB;
+}
+
+body {
+    background-color: #FFCB05;
+}
+
 :root {
     --pokemon-yellow: #FFCB05;
     --pokemon-blue: #3C5AA6;
@@ -38,7 +46,9 @@ main {
 }
 
 #whos-that-pokemon img {
-    filter: contrast(200%) brightness(0%);
+    filter: contrast(200%) brightness(10%);
+    height: 30%;
+    width: 30%;
 }
 
 #whos-that-pokemon h3 {
